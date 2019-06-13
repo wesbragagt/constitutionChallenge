@@ -22,7 +22,11 @@ function wordCount(startLetter, endLetter, string) {
         return word[word.length - 1] === endLetter;
     });
 
-    console.log(endWith);
+    const startAndEndWith = wordsArray.filter(function(word) {
+        return word[0] === startLetter && word[word.length - 1] === endLetter;
+    });
+
+    console.log(startAndEndWith);
 }
 
 wordCount("t", "e", preamble);
