@@ -26,7 +26,7 @@ function wordCount(startLetter, endLetter, string) {
         return word[0] === startLetter && word[word.length - 1] === endLetter;
     });
 
-    console.log(startAndEndWith);
+    console.log(startAndEndWith.length);
 }
 
 wordCount("t", "e", preamble);
