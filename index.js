@@ -17,7 +17,7 @@ function wordCount(startLetter, endLetter, string) {
     const startWith = wordsArray.filter(function(word) {
         return word[0] === startLetter;
     });
-    
+
     const endWith = wordsArray.filter(function(word) {
         return word[word.length - 1] === endLetter;
     });
@@ -26,7 +26,22 @@ function wordCount(startLetter, endLetter, string) {
         return word[0] === startLetter && word[word.length - 1] === endLetter;
     });
 
-    console.log(startAndEndWith.length);
+    // Now ouput a number of words meeting those conditions
+    console.log(
+        ` --------------------------------------------------------------------------------------- \n starting with the letter (${startLetter}) we have a total of ${
+            startWith.length
+        } word(s).`
+    );
+    console.log(
+        `--------------------------------------------------------------------------------------- \n  ending with the letter (${endLetter}) we have a total of ${
+            endWith.length
+        } word(s).`
+    );
+    console.log(
+        `--------------------------------------------------------------------------------------- \n  starting with the letter (${startLetter}) and ending with the letter (${endLetter}) we have a total of ${
+            startAndEndWith.length
+        } word(s).`
+    );
 }
 
 wordCount("t", "e", preamble);
