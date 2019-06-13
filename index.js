@@ -7,5 +7,17 @@ function wordCount(startLetter, endLetter, string) {
     // we split our text string into seperate words inside an array that can be manipulated
 
     const wordsArray = string.toLowerCase().split(/[ ,.]+/);
-    console.log(wordsArray);
+
+    // At first I splitted the string by spaces and realized that I wouldn't be able to compare an ending letter with a comman for example, or period, so by using a regular expression I can split the data separated by spaces, commas and periods.
+
+    // I also found very helpful to parse all of ours words to lower case characters at first in order to make it easier to compare later on.
+
+    // Here we loop through the array and return another array with only elements that pass a certain condition.
+
+    const startWith = wordsArray.filter(function(word) {
+        return word[0] === startLetter;
+    });
+    console.log(startWith);
 }
+
+wordCount("t", "e", preamble);
