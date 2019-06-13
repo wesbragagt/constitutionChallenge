@@ -3,7 +3,7 @@ const preamble =
 
 // First we need a function that will parse our date and give us the output needed based on a certain set of arguments.
 
-function wordCount(startLetter, endLetter, string) {
+function wordCount(startLetter = "t", endLetter = "e", string) {
     // we split our text string into seperate words inside an array that can be manipulated
 
     const wordsArray = string.toLowerCase().split(/[ ,.]+/);
@@ -43,5 +43,8 @@ function wordCount(startLetter, endLetter, string) {
         } word(s).`
     );
 }
+// Making our application more dynamic so the user can pass different letters as arguments to our node execution command.
+const startingLetter = process.argv[2];
+const endingLetter = process.argv[3];
 
-wordCount("t", "e", preamble);
+wordCount(startingLetter, endingLetter, preamble);
