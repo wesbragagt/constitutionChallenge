@@ -17,7 +17,12 @@ function wordCount(startLetter, endLetter, string) {
     const startWith = wordsArray.filter(function(word) {
         return word[0] === startLetter;
     });
-    console.log(startWith);
+    
+    const endWith = wordsArray.filter(function(word) {
+        return word[word.length - 1] === endLetter;
+    });
+
+    console.log(endWith);
 }
 
 wordCount("t", "e", preamble);
